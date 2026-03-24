@@ -17,6 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -103,6 +107,16 @@
         .faq-item[open] summary svg {
             transform: rotate(180deg);
         }
+
+        /* Rural Swiper Zoom Animation */
+        .rural-swiper .swiper-slide img {
+            transition: transform 6s ease-out;
+            transform: scale(1);
+        }
+
+        .rural-swiper .swiper-slide-active img {
+            transform: scale(1.15);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -162,10 +176,10 @@
                 Especialistas em Conectividade Rural e Empresarial
             </span>
             <h1 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8 hero-reveal">
-                Sem sinal de celular na sua <br class="hidden md:block"> <span class="text-gradient">fazenda ou indústria?</span>
+                Sem sinal de celular na sua <br class="hidden md:block"> <span class="text-gradient">comunidade rural, fazenda ou indústria?</span>
             </h1>
             <p class="max-w-3xl mx-auto text-white/70 text-lg md:text-xl font-normal leading-relaxed mb-12 hero-reveal">
-                Levamos conectividade para regiões onde as operadoras não chegam. Implantação e ampliação de sinal celular para áreas rurais, empresas e operações remotas com tecnologia de elite.
+                Levamos conectividade para regiões onde as operadoras não chegam. Implantação e ampliação de sinal celular para áreas rurais, empresas e operações remotas com tecnologia de ponta.
             </p>
             <div class="flex flex-col md:flex-row items-center justify-center gap-6 hero-reveal">
                 <a href="https://api.whatsapp.com/send?phone=5532988371001&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="cta-pulse bg-primary text-white font-bold uppercase tracking-widest px-10 py-5 rounded-full hover:scale-105 transition-transform text-sm">
@@ -307,12 +321,61 @@
                     </a>
                 </div>
                 <div class="relative scroll-reveal order-1 lg:order-2">
-                    <div class="aspect-video sm:aspect-square rounded-3xl overflow-hidden border border-white/10">
-                        <img src="https://lh3.googleusercontent.com/d/1yHCCHTznDDwkq_iBNb-lEb3iaj659Gr5" alt="Rural Connectivity" class="w-full h-full object-cover">
+                    <!-- Swiper Carousel for Rural Signal -->
+                    <div class="swiper rural-swiper rounded-3xl overflow-hidden border border-white/10 aspect-[3/4] w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] mx-auto lg:ml-auto lg:mr-0 shadow-2xl shadow-primary/5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/15LMFeudzJys_1IXMtplRvHjrcM9DCnA1" alt="Rural Connectivity 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1D98BeK_1FuhVBNXYUgoHnyzTQ-NqMilu" alt="Rural Connectivity 2" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1DwPfTiUv4hGlt-c3lM-sQDGhwig3Z_nQ" alt="Rural Connectivity 3" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1F3-SZ_LTTdNm0jERdNSgN-hXEEtsD8nV" alt="Rural Connectivity 4" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1GedyXMcXQXgD4-lpf4adBupdNnxVYuxw" alt="Rural Connectivity 5" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1IZlURwxzsnvSXz9pyBCNhjysLy9nRyNS" alt="Rural Connectivity 6" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1VyQRoN3QN23eoKQTDxVa3V6fNxXczZi7" alt="Rural Connectivity 7" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1Z5T_MbM9QdRStYCitdb5BAL725iWU6Ud" alt="Rural Connectivity 8" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1fQGb2IQGUCNgFUQIkpFwoe9HmtzMnVWR" alt="Rural Connectivity 9" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1i8l-Jcl2k1KrPTxM3UNbDpGVqxZ3dqgV" alt="Rural Connectivity 10" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1j4Rbgt2f4SygCi4BKTvLHlQitEkJaM5p" alt="Rural Connectivity 11" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1u34VYHaON8HSHlhUvM7CJnLsQNo3oO7n" alt="Rural Connectivity 12" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1wCr90KrBfs5h3ZYje0JVMRy8Za7_BPxg" alt="Rural Connectivity 13" class="w-full h-full object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://lh3.googleusercontent.com/d/1w_taoZk8VGceVd4hCZ8M6bbIEUZVZGNr" alt="Rural Connectivity 14" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Navigation -->
+                        <div class="swiper-button-next !text-white after:!text-xl"></div>
+                        <div class="swiper-button-prev !text-white after:!text-xl"></div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 glass p-4 md:p-8 rounded-2xl">
-                        <p class="text-primary font-bold text-xl md:text-3xl mb-1">Solução Real</p>
-                        <p class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest">Para áreas sem sinal</p>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 glass p-4 sm:p-6 rounded-2xl z-20 shadow-xl border border-white/5">
+                        <p class="text-primary font-bold text-lg sm:text-2xl mb-1">Solução Real</p>
+                        <p class="text-white/60 text-[10px] sm:text-[11px] uppercase tracking-widest">Para áreas sem sinal</p>
                     </div>
                 </div>
             </div>
@@ -831,6 +894,62 @@
                     });
                 }
             });
+        });
+
+        // Swiper Initialization
+        const servicesSwiper = new Swiper('.services-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            }
+        });
+
+        const ruralSwiper = new Swiper('.rural-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1200,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
 </body>
